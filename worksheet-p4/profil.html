@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rak Buku Saya - Aqila Sabrina</title>
+
+  <!-- Urutan pemuatan CSS untuk Pertemuan 4 (WAJIB BERURUTAN) -->
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="komponen.css">
+  <link rel="stylesheet" href="tema.css">
+</head>
+<body>
+
+  <!-- Landmark Header & Navigasi -->
+  <header>
+    <!-- Pengalih Tema Gelap (Tanpa JavaScript) -->
+    <input type="checkbox" id="tema" class="pengalih-tema">
+    <label for="tema" class="tombol-tema">Tema Gelap</label>
+
+    <div class="header-baris">
+      <h1>Rak Buku Saya</h1>
+      <nav aria-label="Navigasi utama">
+        <ul>
+          <li><a href="#daftar-buku">Daftar Buku</a></li>
+          <li><a href="#tambah-buku">Tambah Buku</a></li>
+          <li><a href="#tentang-saya">Tentang Saya</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Landmark Main -->
+  <main>
+    <!-- Section 1: Tabel Data Buku -->
+    <section id="daftar-buku">
+      <h2>Daftar Koleksi Buku</h2>
+      
+      <table>
+        <caption>Koleksi Buku Pribadi Tahun 2026</caption>
+        <thead>
+          <tr>
+            <th scope="col">Judul Buku</th>
+            <th scope="col">Penulis</th>
+            <th scope="col">Tahun Terbit</th>
+            <th scope="col">Status Baca</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Laskar Pelangi</th>
+            <td>Andrea Hirata</td>
+            <td>2005</td>
+            <td>Selesai</td>
+          </tr>
+          <tr>
+            <th scope="row">Bumi</th>
+            <td>Tere Liye</td>
+            <td>2014</td>
+            <td>Selesai</td>
+          </tr>
+          <tr>
+            <th scope="row">Atomic Habits</th>
+            <td>James Clear</td>
+            <td>2018</td>
+            <td>Sedang Dibaca</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Gambar dengan Alt Text Bermakna -->
+      <figure>
+        <img src="koleksi-buku.webp" 
+             alt="Foto rak kayu berisi jajaran buku novel dan pengembangan diri yang tersusun rapi." 
+             width="640" 
+             height="360" 
+             loading="lazy">
+        <figcaption>Rak buku tempat menyimpan koleksi bacaan harian.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Section 2: Form Tambah Buku -->
+    <section id="tambah-buku">
+      <h2>Tambah Koleksi Buku</h2>
+
+      <form action="/simpan" method="post">
+        <p class="form-kolom">
+          <label for="judul-buku">Judul Buku:</label>
+          <input type="text" id="judul-buku" name="judul-buku" required>
+          <span class="pesan-galat">Judul buku wajib diisi.</span>
+        </p>
+
+        <p class="form-kolom">
+          <label for="penulis-buku">Penulis:</label>
+          <input type="text" id="penulis-buku" name="penulis-buku" required>
+          <span class="pesan-galat">Nama penulis wajib diisi.</span>
+        </p>
+
+        <p class="form-kolom">
+          <label for="tahun-terbit">Tahun Terbit:</label>
+          <input type="number" id="tahun-terbit" name="tahun-terbit" min="1900" max="2026" required>
+          <span class="pesan-galat">Masukkan tahun terbit antara 1900–2026.</span>
+        </p>
+
+        <p class="form-kolom">
+          <label for="status-baca">Status Baca:</label>
+          <select id="status-baca" name="status-baca" required>
+            <option value="">-- Pilih Status --</option>
+            <option value="selesai">Selesai</option>
+            <option value="sedang-dibaca">Sedang Dibaca</option>
+            <option value="belum-dibaca">Belum Dibaca</option>
+          </select>
+          <span class="pesan-galat">Silakan pilih status baca.</span>
+        </p>
+
+        <button type="submit">Simpan Buku</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Landmark Footer -->
+  <footer id="tentang-saya">
+    <p>Aqila Sabrina · NIM: 25523097 · Kelas C · 2026</p>
+  </footer>
+
+</body>
+</html>
