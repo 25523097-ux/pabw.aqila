@@ -34,7 +34,7 @@ const formatKeahlian = (daftar) => daftar.join(" · ");
 
 // Uji panggil kedua fungsi di Console
 console.log(buatPerkenalan(profil));
-console.log(formatKeahlian(keahlian));
+console.log(formatKeahlian(profil.keahlian));
 
 // ==========================================
 // LEMBAR D — STRUKTUR DATA DAN ARRAY METHODS
