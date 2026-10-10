@@ -1,22 +1,15 @@
 # Repository PABW - Aqila Sabrina (25523097)
 
-## Pertemuan 4: Desain Token dan CSS Modular
+## Pertemuan 8 - JavaScript Modern ES6+, Struktur Data, dan Array Methods
 
-Pada pengerjaan minggu ini, saya memisahkan berkas stylesheet menjadi 5 file modular untuk halaman profil koleksi buku:
+### Ringkasan Pengerjaan
+Pada pertemuan ini, isi halaman profil dipindahkan dari teks tetap HTML ke dalam variabel JavaScript (objek & array) serta diolah menggunakan array methods (`map`, `filter`, `find`) tanpa mengubah data asli.
 
-- `tokens.css`: Variabel warna, spasi, dan font
-- `base.css`: Reset standar elemen HTML
-- `layout.css`: Pengaturan flexbox header dan susunan main
-- `komponen.css`: Tampilan tabel buku, form, dan kartu gambar
-- `tema.css`: Fitur mode gelap sederhana
+### Deklarasi AI
+- **Bagian yang dibantu AI**: Membantu memverifikasi logika array methods (`map`, `filter`, `find`) dan penanganan galat jaringan Git.
+- **Bagian yang dikerjakan sendiri**: Penyusunan data profil sebagai variabel & objek, pemuatan skrip modul ES6, penulisan dua fungsi murni, pengisian tabel jawaban worksheet, dan penanganan galat `querySelector`/`null`.
 
-### Token Utama
-
-| Variabel | Nilai | Penggunaan |
-| --- | --- | --- |
-| `--color-primary` | `#1D3A8C` | Aksesibilitas header tabel & tombol |
-| `--color-bg` | `#F8FAFC` | Warna latar belakang |
-| `--color-surface` | `#FFFFFF` | Latar belakang tabel dan form |
-| `--radius-md` | `0.5rem` | Kebulatan sudut elemen |
-
-Setiap perubahan warna utama cukup diperbarui pada `--color-primary` di file `tokens.css` agar langsung berubah di seluruh komponen.
+### Catatan Penting / Hal yang Mengatur Pengoperasian
+- Penggunaan `const` dan `let` disesuaikan dengan niat mutasi variabel.
+- Menggunakan `{ ...profil }` untuk membuat salinan dangkal (shallow copy) objek agar data asli tidak ikut berubah saat diubah.
+- Skrip dihubungkan menggunakan `<script type="module" src="js/app.js"></script>` sebelum tag penutup `</body>`.
