@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil Aqila Sabrina</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="avatar" aria-hidden="true">AS</div>
+      <div>
+        <h1>Aqila Sabrina</h1>
+        <p class="subtitle">Mahasiswa Informatika</p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="topnav" aria-label="Navigasi utama">
+    <ul>
+      <li><a href="#keahlian">Keahlian</a></li>
+      <li><a href="#proyek">Proyek</a></li>
+      <li><a href="#film">Film</a></li>
+      <li><a href="#tambah-film">Tambah Film</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="keahlian">
+      <h2>Keahlian</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </section>
+
+    <section id="proyek">
+      <h2>Daftar Proyek</h2>
+      <div id="filter" class="filter-row">
+        <button type="button" class="filter active" data-category="all">Semua</button>
+        <button type="button" class="filter" data-category="web">Web</button>
+        <button type="button" class="filter" data-category="aplikasi">Aplikasi</button>
+        <button type="button" class="filter" data-category="mobile">Mobile</button>
+      </div>
+      <div class="table-wrap">
+        <table id="tabel-proyek">
+          <caption>Daftar proyek yang pernah kukerjakan</caption>
+          <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">Judul Proyek</th>
+              <th scope="col">Kategori</th>
+              <th scope="col">Tahun</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p id="empty" class="empty" hidden>Belum ada proyek di kategori ini.</p>
+    </section>
+
+    <section id="film">
+      <h2>Film yang Pernah Kutonton <span id="jumlah-film" class="count"></span></h2>
+      <div class="table-wrap">
+        <table id="tabel-film">
+          <caption>Daftar film yang pernah kutonton</caption>
+          <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">Judul Film</th>
+              <th scope="col">Tahun</th>
+              <th scope="col">Genre</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="tambah-film">
+      <h2>Tambah Film</h2>
+      <form id="form-film" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="film-judul">Judul Film</label>
+            <input type="text" id="film-judul" name="judul" required>
+          </div>
+          <div class="field">
+            <label for="film-tahun">Tahun Rilis</label>
+            <input type="number" id="film-tahun" name="tahun" min="1888" required>
+          </div>
+          <div class="field">
+            <label for="film-genre">Genre</label>
+            <select id="film-genre" name="genre" required>
+              <option value="">Pilih genre</option>
+              <option>Aksi</option>
+              <option>Horor</option>
+              <option>Komedi</option>
+              <option>Drama</option>
+              <option>Fantasi</option>
+              <option>Romantis</option>
+              <option>Fiksi Ilmiah</option>
+              <option>Thriller</option>
+              <option>Animasi</option>
+            </select>
+          </div>
+        </div>
+        <p id="form-pesan" class="form-pesan" role="status" aria-live="polite"></p>
+        <div class="form-aksi">
+          <button type="submit" class="btn">Simpan Film</button>
+          <button type="button" id="reset-film" class="btn btn-ghost">Kembalikan ke awal</button>
+        </div>
+      </form>
+    </section>
+
+    <figure>
+      <img src="movie.jpg" alt="A collection of film posters" width="640" height="600">
+      <figcaption>A list of several movie posters</figcaption>
+    </figure>
+  </main>
+
+  <footer>
+    <p>Aqila Sabrina · 25523097 · 2026</p>
+  </footer>
+
+  <script type="module" src="js/dom.js"></script>
+</body>
+</html>
