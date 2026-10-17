@@ -1,0 +1,33 @@
+{
+  "pemilik": "Aqila Sabrina",
+  "diperbarui": "2026-10-17",
+  "proyek": [
+    {
+      "id": 1,
+      "judul": "Halaman Profil",
+      "kategori": "web",
+      "tahun": 2026,
+      "selesai": true,
+      "deskripsi": "Halaman profil pribadi dengan HTML, CSS, dan JavaScript.",
+      "tautan": "https://github.com/"
+    },
+    {
+      "id": 2,
+      "judul": "Katalog Produk",
+      "kategori": "web",
+      "tahun": 2026,
+      "selesai": false,
+      "deskripsi": "Katalog produk yang masih dalam pengerjaan.",
+      "tautan": null
+    },
+    {
+      "id": 3,
+      "judul": "Aplikasi Kasir",
+      "kategori": "aplikasi",
+      "tahun": 2025,
+      "selesai": true,
+      "deskripsi": "Aplikasi kasir sederhana untuk mencatat transaksi.",
+      "tautan": null
+    }
+  ]
+}
